@@ -62,7 +62,7 @@ const Contact = () => {
             {/* Social links */}
             <div className="flex items-center justify-center gap-4">
               <a
-                href="https://www.linked.com/in/harish-v-31a332291"
+                href="https://www.linkedin.com/in/harish-v-31a332291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300"
