@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
@@ -19,7 +18,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="text-xl font-bold gradient-text">
-            Portfolio
+            Harish V
           </a>
 
           {/* Desktop Navigation */}
@@ -33,8 +32,8 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Resume
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="mailto:harihari1443@gmail.com">Contact</a>
             </Button>
           </div>
 
@@ -61,8 +60,8 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
-                Resume
+              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit" asChild>
+                <a href="mailto:harihari1443@gmail.com">Contact</a>
               </Button>
             </div>
           </div>

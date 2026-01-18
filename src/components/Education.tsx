@@ -2,40 +2,37 @@ import { GraduationCap, Calendar, BookOpen } from "lucide-react";
 
 const educationData = [
   {
-    institution: "Uva Wellassa University of Sri Lanka",
-    degree: "BEng Technology in Mechanical Engineering Technology",
-    period: "2024 - 2028",
+    institution: "Coimbatore Institute of Technology",
+    degree: "Bachelor of Engineering in Mechanical Engineering",
+    location: "Coimbatore, Tamil Nadu",
+    period: "Aug 2023 - May 2027 (Expected)",
+    cgpa: "CGPA: 8/10",
     coursework: [
-      "Engineering Mathematics",
-      "Engineering Physics",
-      "Workshop Technology",
-      "Mechanical Design",
-      "Control Systems",
+      "Heat Transfer",
       "Thermodynamics",
+      "Fluid Mechanics",
+      "Thermal Sciences",
+      "Manufacturing Processes",
+      "CAD/CAM",
+      "Metal Fabrication",
+      "Quality Control",
+      "Lean and Agile Manufacturing",
+      "Total Quality Management",
     ],
     activities: [
-      "Member of SOMET (Society of Mechanical Engineering Technology)",
-      "Participated in engineering design competitions",
-      "Organized technical workshops for junior students",
+      "Thermal Sciences Specialization",
+      "Manufacturing & Design focus",
+      "Manufacturing & Quality Management",
     ],
   },
   {
-    institution: "Institute of Computer Engineering Technology",
-    degree: "Software Engineering Training",
-    period: "2022 - 2023",
-    coursework: [
-      "Object-Oriented Programming",
-      "Data Structures and Algorithms",
-      "Web Development",
-      "Database Management Systems",
-      "Software Testing",
-      "Agile Development",
-    ],
-    activities: [
-      "Developed a web-based student information system",
-      "Portfolio of software projects",
-      "Developed POS system for a local business",
-    ],
+    institution: "Sri Ramakrishna Matric Higher Secondary School",
+    degree: "Higher Secondary Education",
+    location: "Perambalur, Tamil Nadu",
+    period: "2009 - 2023",
+    cgpa: null,
+    coursework: [],
+    activities: [],
   },
 ];
 
@@ -49,7 +46,7 @@ const Education = () => {
             <span className="gradient-text">Education</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            My academic journey in engineering and software development
+            My academic journey in mechanical engineering
           </p>
         </div>
 
@@ -69,6 +66,8 @@ const Education = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">{edu.institution}</h3>
                     <p className="text-muted-foreground">{edu.degree}</p>
+                    <p className="text-sm text-muted-foreground">{edu.location}</p>
+                    {edu.cgpa && <p className="text-sm text-primary font-medium mt-1">{edu.cgpa}</p>}
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
@@ -78,35 +77,39 @@ const Education = () => {
               </div>
 
               {/* Coursework */}
-              <div className="mb-6">
-                <h4 className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
-                  <BookOpen className="w-4 h-4 text-primary" />
-                  Relevant Coursework
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {edu.coursework.map((course, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground"
-                    >
-                      {course}
-                    </span>
-                  ))}
+              {edu.coursework.length > 0 && (
+                <div className="mb-6">
+                  <h4 className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
+                    <BookOpen className="w-4 h-4 text-primary" />
+                    Relevant Coursework
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {edu.coursework.map((course, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Activities */}
-              <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">Activities & Involvement</h4>
-                <ul className="space-y-2">
-                  {edu.activities.map((activity, i) => (
-                    <li key={i} className="flex items-start gap-2 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      {activity}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {edu.activities.length > 0 && (
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Specializations</h4>
+                  <ul className="space-y-2">
+                    {edu.activities.map((activity, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        {activity}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
         </div>

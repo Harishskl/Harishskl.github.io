@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Github, FileText } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -19,9 +19,15 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto">
           <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center">
             {/* Location */}
-            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
+            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-4">
               <MapPin className="w-5 h-5 text-primary" />
-              <span>Sri Lanka</span>
+              <span>Coimbatore, Tamil Nadu, India</span>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
+              <Phone className="w-5 h-5 text-primary" />
+              <span>+91 6383198095</span>
             </div>
 
             {/* Main CTA */}
@@ -29,20 +35,24 @@ const Contact = () => {
               Ready to work together?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-              I'm currently open to internship opportunities and freelance projects. 
+              I'm currently open to internship opportunities in mechanical engineering. 
               Feel free to reach out if you'd like to collaborate!
             </p>
 
             {/* Email button */}
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-box mb-8">
-              <Mail className="w-5 h-5 mr-2" />
-              Send Email
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-box mb-8" asChild>
+              <a href="mailto:harihari1443@gmail.com">
+                <Mail className="w-5 h-5 mr-2" />
+                harihari1443@gmail.com
+              </a>
             </Button>
 
             {/* Social links */}
             <div className="flex items-center justify-center gap-4">
               <a
-                href="#"
+                href="https://linkedin.com/in/harish"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300"
                 aria-label="LinkedIn"
               >
@@ -54,13 +64,6 @@ const Contact = () => {
                 aria-label="GitHub"
               >
                 <Github className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300"
-                aria-label="Resume"
-              >
-                <FileText className="w-6 h-6" />
               </a>
             </div>
           </div>

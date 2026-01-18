@@ -21,30 +21,30 @@ const Hero = () => {
               </span>
               <span className="badge-glow flex items-center gap-2">
                 <GraduationCap className="w-4 h-4" />
-                Student
+                BE Mechanical Engineering
               </span>
             </div>
 
             {/* Main heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up-delay-1">
-              <span className="gradient-text">Automation Engineering</span>
+              <span className="gradient-text">Harish V</span>
               <br />
-              <span className="text-foreground">Student & Web Developer</span>
+              <span className="text-foreground">Mechanical Engineer</span>
             </h1>
 
             {/* Description */}
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8 animate-fade-up-delay-2">
-              Bridging the gap between automation engineering and modern web development. 
-              Aiming to innovate in automation engineering with a focus on integrating hardware and software solutions.
+              Mechanical Engineer with strong expertise in thermal science and mechanical design. 
+              Skilled in analyzing, modeling, and optimizing mechanical systems for efficiency and reliability.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-up-delay-3">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-box">
-                Explore My Work
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-box" asChild>
+                <a href="#projects">Explore My Work</a>
               </Button>
-              <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-                Connect With Me
+              <Button size="lg" variant="outline" className="border-border hover:bg-secondary" asChild>
+                <a href="#contact">Connect With Me</a>
               </Button>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Hero = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 animate-pulse-glow" />
                 <div className="absolute inset-2 rounded-full bg-card border-2 border-border overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
-                    <div className="text-6xl md:text-7xl font-bold gradient-text">CS</div>
+                    <div className="text-6xl md:text-7xl font-bold gradient-text">HV</div>
                   </div>
                 </div>
               </div>

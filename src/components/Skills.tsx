@@ -1,45 +1,43 @@
 import { useState } from "react";
-import { Cog, Code2, Wrench } from "lucide-react";
+import { Cog, Code2, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const skillCategories = [
   {
-    id: "engineering",
-    label: "Engineering",
+    id: "technical",
+    label: "Technical Skills",
     icon: Cog,
     skills: [
       { name: "AutoCAD", level: "Advanced" },
       { name: "SolidWorks", level: "Advanced" },
-      { name: "Arduino Programming", level: "Intermediate" },
+      { name: "ANSYS Workbench", level: "Intermediate" },
+      { name: "Thermal Analysis", level: "Advanced" },
       { name: "Mechanical Design", level: "Advanced" },
-      { name: "Control Systems", level: "Intermediate" },
-      { name: "PLC Programming", level: "Beginner" },
+      { name: "CAD/CAM", level: "Advanced" },
     ],
   },
   {
-    id: "software",
-    label: "Software",
+    id: "programming",
+    label: "Programming",
     icon: Code2,
     skills: [
-      { name: "React", level: "Advanced" },
-      { name: "TypeScript", level: "Advanced" },
-      { name: "Next.js", level: "Intermediate" },
-      { name: "Node.js", level: "Intermediate" },
-      { name: "Tailwind CSS", level: "Advanced" },
-      { name: "Python", level: "Intermediate" },
+      { name: "C", level: "Intermediate" },
+      { name: "Python", level: "Beginner" },
+      { name: "HTML", level: "Intermediate" },
+      { name: "CSS", level: "Intermediate" },
     ],
   },
   {
-    id: "additional",
-    label: "Additional",
-    icon: Wrench,
+    id: "soft",
+    label: "Soft Skills",
+    icon: Users,
     skills: [
-      { name: "Git & GitHub", level: "Advanced" },
-      { name: "Figma", level: "Intermediate" },
-      { name: "Problem Solving", level: "Advanced" },
-      { name: "Team Collaboration", level: "Advanced" },
-      { name: "Project Management", level: "Intermediate" },
-      { name: "Technical Writing", level: "Intermediate" },
+      { name: "Problem-solving", level: "Advanced" },
+      { name: "Analytical Thinking", level: "Advanced" },
+      { name: "Teamwork & Collaboration", level: "Advanced" },
+      { name: "Technical Documentation", level: "Advanced" },
+      { name: "Adaptability", level: "Advanced" },
+      { name: "Process Improvement", level: "Intermediate" },
     ],
   },
 ];
@@ -51,7 +49,7 @@ const levelColors: Record<string, string> = {
 };
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("engineering");
+  const [activeCategory, setActiveCategory] = useState("technical");
 
   const activeSkills = skillCategories.find((c) => c.id === activeCategory)?.skills || [];
 
@@ -64,7 +62,7 @@ const Skills = () => {
             <span className="gradient-text">Skills & Expertise</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            A combination of engineering knowledge and software development skills
+            Technical proficiency in mechanical engineering and software tools
           </p>
         </div>
 
